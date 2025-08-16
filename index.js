@@ -1,15 +1,18 @@
 // index.js
 import express from "express";
 import * as databaseHandler from "./app/services/databaseHandler.js";
-import categoriesRoutes from "./app/routes/categories.js";
+import categoryRoutes from "./app/routes/category.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+// Serve static files from public folder
+app.use(express.static("public"));
+
 // Register routes
-app.use("/categories", categoriesRoutes);
+app.use("/category", categoryRoutes);
 
 app.get("/", (req, res) => {
     res.send("Hello from Express + SQLite 🚀");
