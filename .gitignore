@@ -4,7 +4,7 @@
 .idea/
 
 #ignore database
-./database.db
+database.db
 
 
 
