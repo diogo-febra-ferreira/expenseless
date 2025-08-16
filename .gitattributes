@@ -1,0 +1,8 @@
+# Set all text files to use LF in the repo and when checked out
+* text=auto eol=lf
+
+# Optional: force specific extensions (like JS, JSON) to LF
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
