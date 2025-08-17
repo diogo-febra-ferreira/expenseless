@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<h1>Dashboard</h1>
 
-<div> Categories:</div>
-<a href="/category">Here!</a>
+<nav>
+    <div class="logo">Expense-Less</div>
+    <ul id="menu">
+        <li class="selected-menu-item"><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/category">Categories</a></li>
+        <li><a href="/expenses">Expenses</a></li>
+    </ul>
+</nav>
 
 <script src="/js/dashboard.js"></script>
 </body>

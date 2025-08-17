@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<h1>Category List</h1>
+
+<nav>
+    <div class="logo">Expense-Less</div>
+    <ul id="menu">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li class="selected-menu-item"><a href="/category">Categories</a></li>
+        <li><a href="/expenses">Expenses</a></li>
+    </ul>
+</nav>
+
 <div id="categories-container"></div>
 
 <script src="/js/category.js"></script>
