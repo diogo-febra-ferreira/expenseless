@@ -19,13 +19,14 @@ Then visit: http://localhost:3000
 
 ```csharp
 app/
-├── routes/        # Route definitions (serve templates, call services)
-└── services/      # Database + business logic
-
-public/            # Static assets (CSS, JS, images)
-├── css/           # shared CSS
-├── html/          # HTML templates
-└── js/            # JS used in the templates
+├── routes/          # Route definitions (serve templates, call services)
+        └── api/     # routes for api calls to interact with the database
+└── services/        # Database + business logic
+  
+public/              # Static assets (CSS, JS, images)
+├── css/             # shared CSS
+├── html/            # HTML templates
+└── js/              # JS used in the templates
 ```
 
 ---
