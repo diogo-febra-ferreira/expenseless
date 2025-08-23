@@ -34,7 +34,7 @@ public/              # Static assets (CSS, JS, images)
 
 - Backend: Node.js + Express
 - Database: SQLite
-- Frontend: HTML templates + AJAX
+- Frontend: HTML templates + AJAX + Bootstrap
 - Containerization: Docker + Docker Compose
 
 ---
