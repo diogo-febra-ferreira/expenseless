@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 
 import categoryRoutes from "./app/routes/category.js";
 import apiCategoryRoutes from "./app/routes/api/category.js";
+import apiExpenseRoutes from "./app/routes/api/expense.js";
 import dashboardRoutes from "./app/routes/dashboard.js";
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use("/category", categoryRoutes);
 app.use("/dashboard", dashboardRoutes);
 app.use("/api/category", apiCategoryRoutes);
+app.use("/api/expense", apiExpenseRoutes);
 
 //serve bootstrap
 app.use(
