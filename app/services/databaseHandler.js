@@ -1,9 +1,10 @@
-const sqlite3 = require("sqlite3").verbose();
+import sqlite3pkg from "sqlite3";
+const sqlite3 = sqlite3pkg.verbose();
 
 /**
  *  Returns an instance of the database
  *
- * @returns {Promise<void>}
+ * @returns {Promise<sqlite3.Database>}
  */
 async function getDB() {
     // SQLite DB setup
@@ -45,7 +46,4 @@ async function setupDB(db) {
     );
 }
 
-module.exports = {
-    getDB,
-    setupDB,
-};
+export { getDB, setupDB };
