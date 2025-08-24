@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 import categoryRoutes from "./app/routes/category.js";
+import expenseRoutes from "./app/routes/expense.js";
 import apiCategoryRoutes from "./app/routes/api/category.js";
 import apiExpenseRoutes from "./app/routes/api/expense.js";
 import dashboardRoutes from "./app/routes/dashboard.js";
@@ -19,9 +20,10 @@ app.use(express.json());
 
 // Register routes
 app.use("/category", categoryRoutes);
-app.use("/dashboard", dashboardRoutes);
+app.use("/expense", expenseRoutes);
 app.use("/api/category", apiCategoryRoutes);
 app.use("/api/expense", apiExpenseRoutes);
+app.use("/dashboard", dashboardRoutes);
 
 //serve bootstrap
 app.use(
