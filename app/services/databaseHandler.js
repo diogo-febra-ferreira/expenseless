@@ -36,7 +36,7 @@ async function setupDB(db) {
          (
              id          INTEGER PRIMARY KEY AUTOINCREMENT,
              value       FLOAT NOT NULL,
-             date        DATETIME NOT NULL,
+             date        DATE NOT NULL,
              description TEXT,
              category_id INTEGER,
              FOREIGN KEY (category_id) REFERENCES category (id)
