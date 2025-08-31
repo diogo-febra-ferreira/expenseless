@@ -8,7 +8,7 @@ const sqlite3 = sqlite3pkg.verbose();
  */
 async function getDB() {
     // SQLite DB setup
-    return new sqlite3.Database("./database.db", (err) => {
+    return new sqlite3.Database("./db/database.db", (err) => {
         if (err) {
             console.error("Error opening database", err);
         }
