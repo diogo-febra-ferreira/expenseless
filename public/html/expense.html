@@ -36,11 +36,41 @@
 
 <!-- Main content -->
 <main class="container my-4 flex-grow-1">
-    <h1 class="mb-4 text-center">Your Categories</h1>
-    <div id="expenses-container" class="row g-3">
-        <!-- dynamically filled with JS -->
+    <h1 class="mb-4 text-center">Your Monthly Expenses</h1>
+    <div class="table-responsive mb-5">
+        <table class="table table-striped table-bordered text-center align-middle" id="expenses-table">
+            <thead class="table-dark">
+            <tr>
+                <th>Month</th>
+                <th>Total Expenses (€)</th>
+                <th>Average Daily Expenses (€)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Filled by JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="mb-4 text-center">All Expenses</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered text-center align-middle" id="all-expenses-table">
+            <thead class="table-dark">
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount (€)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Filled by JS -->
+            </tbody>
+        </table>
     </div>
 </main>
+
+
 
 <!-- Footer -->
 <footer class="bg-dark text-light py-3 mt-auto">
