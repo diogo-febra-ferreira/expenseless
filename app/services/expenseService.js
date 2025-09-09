@@ -1,4 +1,5 @@
 import * as databaseHandler from "./databaseHandler.js";
+
 const db = await databaseHandler.getDB();
 
 /**
@@ -8,13 +9,17 @@ const db = await databaseHandler.getDB();
  */
 async function getAllExpenses() {
     return new Promise((resolve, reject) => {
-        db.all("SELECT * FROM expense", (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(rows);
-            }
-        });
+        db.all(
+            `SELECT value, date, e.description as description, name
+             FROM expense e
+                      JOIN category c ON e.category_id = c.id`
+            , (err, rows) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(rows);
+                }
+            });
     });
 }
 
@@ -42,4 +47,4 @@ async function createExpense(value, date, description = null, category_id = null
     });
 }
 
-export { createExpense, getAllExpenses };
+export {createExpense, getAllExpenses};
